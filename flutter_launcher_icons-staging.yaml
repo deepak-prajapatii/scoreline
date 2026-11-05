@@ -1,0 +1,10 @@
+# Launcher icon for the `staging` flavor. See flutter_launcher_icons-dev.yaml
+# for why this is Android-only and why `prod` has no file.
+flutter_launcher_icons:
+  image_path: assets/icon/scoreline_staging.png
+  android: true
+  ios: false
+  # Bronze — the gradient start of scoreline_staging.png.
+  adaptive_icon_background: "#FB7185"
+  adaptive_icon_foreground: assets/icon/scoreline_foreground.png
+  adaptive_icon_monochrome: assets/icon/scoreline_foreground.png

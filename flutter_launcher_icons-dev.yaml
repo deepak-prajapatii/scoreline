@@ -1,0 +1,19 @@
+# Launcher icon for the `dev` flavor. Picked up automatically by
+# `dart run flutter_launcher_icons`, which writes into android/app/src/dev/res/
+# and lets Gradle overlay it on top of main/.
+#
+# Android only: iOS has no flavors in this repo, so generating an iOS icon set
+# here would overwrite the single Runner icon with dev colours.
+#
+# `prod` has no file of its own on purpose — it inherits the icons already in
+# android/app/src/main/res/mipmap-*, and a third identical config would be
+# duplication with nothing to say.
+flutter_launcher_icons:
+  image_path: assets/icon/scoreline_dev.png
+  android: true
+  ios: false
+  # Gold — matches the gradient start of scoreline_dev.png, so the adaptive
+  # icon and the legacy square agree.
+  adaptive_icon_background: "#FBBF24"
+  adaptive_icon_foreground: assets/icon/scoreline_foreground.png
+  adaptive_icon_monochrome: assets/icon/scoreline_foreground.png

@@ -1,0 +1,17 @@
+name: engine
+description: >-
+  The match backend stand-in. Emits ScoreEvents and knows nothing about
+  leaderboards. Pure Dart, no flutter dependency.
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  equatable: ^2.0.7
+
+dev_dependencies:
+  fake_async: ^1.3.2
+  test: ^1.25.8
+  very_good_analysis: ^7.0.0

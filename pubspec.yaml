@@ -1,0 +1,62 @@
+name: scoreline
+description: >-
+  Scoreline — a real-time leaderboard. A simulated match engine emits score
+  events, a domain package accumulates and ranks them, and one Flutter screen
+  renders the board live on Android and iOS.
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.1
+
+dependencies:
+  # The two logic packages. Path dependencies, and neither depends on flutter:
+  # that is what makes `import 'package:flutter/...'` inside them a compile
+  # error, the same way :engine and :leaderboard have no Android SDK on their
+  # classpath.
+  engine:
+    path: packages/engine
+
+  flutter:
+    sdk: flutter
+
+  # State and dependency injection in one library — the composition root
+  # (lib/di/) and the ViewModel role both live in providers. This is the
+  # Hilt-plus-ViewModel-plus-StateFlow slot on the Android side.
+  flutter_riverpod: ^3.0.3
+
+  leaderboard:
+    path: packages/leaderboard
+
+dev_dependencies:
+  # The launcher icon and the dark window background, generated for both
+  # platforms from one source image.
+  flutter_launcher_icons: ^0.14.4
+  flutter_native_splash: ^2.4.6
+
+  flutter_test:
+    sdk: flutter
+
+  # detekt + Android Lint + ktlint's rule set, in one analyser config.
+  very_good_analysis: ^7.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icon/
+
+flutter_launcher_icons:
+  image_path: assets/icon/scoreline.png
+  android: true
+  adaptive_icon_background: "#7C3AED"
+  adaptive_icon_foreground: assets/icon/scoreline_foreground.png
+  adaptive_icon_monochrome: assets/icon/scoreline_foreground.png
+  ios: true
+  remove_alpha_ios: true
+
+flutter_native_splash:
+  color: "#0B0B12"
+  image: assets/icon/scoreline_foreground.png
+  android_12:
+    color: "#0B0B12"
+    image: assets/icon/scoreline_foreground.png

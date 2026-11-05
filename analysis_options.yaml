@@ -1,0 +1,15 @@
+# very_good_analysis is the detekt + ktlint + Android Lint slot: one strict rule
+# set, applied by `flutter analyze`. The two logic packages include it too, from
+# their own analysis_options.yaml.
+include: package:very_good_analysis/analysis_options.yaml
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - build/**
+    - android/**
+    - ios/**
+    - web/**
+    - windows/**
+    - macos/**
+    - linux/**
