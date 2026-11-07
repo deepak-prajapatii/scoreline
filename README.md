@@ -3,6 +3,16 @@
 A real-time leaderboard app built with Flutter for Android and iOS. A simulated match sends score
 updates every few seconds, and the board re-ranks itself live with smooth row animations.
 
+## Demo
+
+<!-- Drag demo.mp4 into this file on GitHub's web editor; it replaces this line with a video link. -->
+
+The video covers:
+1. **Live updates:** scores arrive every 0.5–2 s and rows slide to their new rank.
+2. **Backgrounded:** the app is switched away from, and the match keeps running.
+3. **Resumed:** the board jumps straight to the latest scores.
+4. **Killed and relaunched:** scores are kept in memory only, so the board starts from zero.
+
 ## Features
 
 - Live leaderboard that updates every 0.5–2 seconds
