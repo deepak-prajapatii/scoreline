@@ -5,13 +5,17 @@ updates every few seconds, and the board re-ranks itself live with smooth row an
 
 ## Demo
 
-<!-- Drag demo.mp4 into this file on GitHub's web editor; it replaces this line with a video link. -->
+<p align="center"><img src="docs/demo.gif" width="300" alt="Scoreline demo on Android"></p>
+
+Full-quality video: [docs/demo.mp4](docs/demo.mp4)
 
 The video covers:
 1. **Live updates:** scores arrive every 0.5–2 s and rows slide to their new rank.
-2. **Backgrounded:** the app is switched away from, and the match keeps running.
-3. **Resumed:** the board jumps straight to the latest scores.
-4. **Killed and relaunched:** scores are kept in memory only, so the board starts from zero.
+2. **Recents screen:** the app keeps updating in the task switcher.
+3. **Backgrounded:** the app goes to the home screen, and the match keeps running.
+4. **Resumed:** the board jumps straight to the latest scores.
+5. **Rotation:** the board survives switching to landscape and back, with no reset.
+6. **Killed and relaunched:** scores are kept in memory only, so the board starts from zero.
 
 ## Features
 
